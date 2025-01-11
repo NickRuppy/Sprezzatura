@@ -131,38 +131,49 @@ export default function Page() {
       `}</style>
 
       {/* Navigation */}
-      <header className="flex items-center justify-between py-4 px-6 border-b border-neutral-800/50">
-        <Link href="/" className="text-lg font-semibold">
-          Software Composer LP
+      <header className="flex items-center justify-between py-6 px-8 border-b border-neutral-800/50">
+        <Link href="/" className="text-2xl font-serif">
+          Sprezzatura Travel
         </Link>
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-6">
+          <Link href="/hotels" className="text-sm text-neutral-200 hover:text-white transition-colors">
+            Hotels
+          </Link>
+          <Link href="/membership" className="text-sm text-neutral-200 hover:text-white transition-colors">
+            Membership
+          </Link>
+          <Link href="/gift-cards" className="text-sm text-neutral-200 hover:text-white transition-colors">
+            Gift cards
+          </Link>
+          <Link href="/discover" className="text-sm text-neutral-200 hover:text-white transition-colors">
+            Discover
+          </Link>
           <Button variant="ghost" size="sm" asChild>
-            <Link href="/login">Log in</Link>
+            <Link href="/join">Join us</Link>
           </Button>
-          <Button size="sm" asChild>
-            <Link href="/signup">Sign up</Link>
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/signin">Sign in</Link>
           </Button>
         </nav>
       </header>
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-20 px-6 relative">
+        <section className="py-32 px-6 relative">
           <div className="hero-glow" />
           <div className="max-w-[1200px] mx-auto text-center relative z-10">
-            <div className="inline-flex items-center px-3 py-1 text-sm text-neutral-400 mb-8 glimmer-pill fade-in">
-              <span>3 Prompts to a Perfect Landing Page</span>
+            <div className="inline-flex items-center px-4 py-2 text-sm text-neutral-300 mb-8 glimmer-pill fade-in">
+              <span>WE GUARANTEE</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight fade-in delay-1">
-              The Cursor Template<br />For Landing Pages
+            <h1 className="text-5xl md:text-7xl font-serif mb-6 tracking-tight fade-in delay-1">
+              The lowest rates and most benefits at<br />the world's best luxury hotels
             </h1>
-            <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto fade-in delay-2">
-              Create stunning landing pages in minutes, not months. Save $10,000+ on design and development
-              with our Cursor-powered template.
-            </p>
-            <div className="fade-in delay-3">
-              <Button size="lg" className="rounded-full">
-                Download Template
+            <div className="flex justify-center gap-4 mt-12 fade-in delay-2">
+              <Button size="lg" className="px-8 py-6 text-lg rounded-none bg-[#C5B483] hover:bg-[#B5A473] text-black">
+                Join now
+              </Button>
+              <Button size="lg" variant="outline" className="px-8 py-6 text-lg rounded-none border-[#C5B483] text-[#C5B483] hover:bg-[#C5B483] hover:text-black">
+                Buy a gift card
               </Button>
             </div>
           </div>
@@ -440,46 +451,62 @@ export default function Page() {
             </div>
           </div>
         </section>
-      </main>
 
-      <footer className="py-8 px-6 border-t border-neutral-800/50 scroll-animation">
-        <div className="max-w-[1200px] mx-auto flex items-center justify-between">
-          <div className="text-sm text-neutral-400">
-            © 2024 Software Composer LP. All rights reserved.
+        {/* Footer */}
+        <footer className="mt-32 border-t border-neutral-800/50">
+          <div className="max-w-[1200px] mx-auto px-8 py-16">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+              <div className="space-y-4">
+                <h3 className="text-xl font-serif">Sprezzatura Travel</h3>
+                <p className="text-sm text-neutral-400">Experience luxury travel with exclusive rates and unparalleled benefits at the world's finest hotels.</p>
+              </div>
+              <div className="space-y-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">Company</h4>
+                <ul className="space-y-2">
+                  <li><Link href="/about" className="text-sm hover:text-[#C5B483] transition-colors">About us</Link></li>
+                  <li><Link href="/careers" className="text-sm hover:text-[#C5B483] transition-colors">Careers</Link></li>
+                  <li><Link href="/press" className="text-sm hover:text-[#C5B483] transition-colors">Press</Link></li>
+                  <li><Link href="/contact" className="text-sm hover:text-[#C5B483] transition-colors">Contact</Link></li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">Membership</h4>
+                <ul className="space-y-2">
+                  <li><Link href="/benefits" className="text-sm hover:text-[#C5B483] transition-colors">Benefits</Link></li>
+                  <li><Link href="/hotels" className="text-sm hover:text-[#C5B483] transition-colors">Hotels</Link></li>
+                  <li><Link href="/gift-cards" className="text-sm hover:text-[#C5B483] transition-colors">Gift Cards</Link></li>
+                  <li><Link href="/faq" className="text-sm hover:text-[#C5B483] transition-colors">FAQ</Link></li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">Legal</h4>
+                <ul className="space-y-2">
+                  <li><Link href="/privacy" className="text-sm hover:text-[#C5B483] transition-colors">Privacy Policy</Link></li>
+                  <li><Link href="/terms" className="text-sm hover:text-[#C5B483] transition-colors">Terms of Service</Link></li>
+                  <li><Link href="/cookie-policy" className="text-sm hover:text-[#C5B483] transition-colors">Cookie Policy</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-16 pt-8 border-t border-neutral-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-sm text-neutral-400">© 2024 Sprezzatura Travel. All rights reserved.</p>
+              <div className="flex items-center gap-6">
+                <Link href="#" className="text-neutral-400 hover:text-[#C5B483] transition-colors">
+                  <span className="sr-only">Instagram</span>
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </Link>
+                <Link href="#" className="text-neutral-400 hover:text-[#C5B483] transition-colors">
+                  <span className="sr-only">Twitter</span>
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </Link>
+                <Link href="#" className="text-neutral-400 hover:text-[#C5B483] transition-colors">
+                  <span className="sr-only">Facebook</span>
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center gap-6">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">
-              <span className="sr-only">Twitter</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
-              </svg>
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">
-              <span className="sr-only">GitHub</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-              </svg>
-            </a>
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">
-              <span className="sr-only">Discord</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M18 6h0a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-7a3 3 0 0 1-3-3v0"/>
-                <path d="M6 18v-7a3 3 0 0 1 3-3h7"/>
-                <circle cx="8" cy="12" r="1"/>
-                <circle cx="16" cy="12" r="1"/>
-              </svg>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition-colors">
-              <span className="sr-only">LinkedIn</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                <rect x="2" y="9" width="4" height="12"/>
-                <circle cx="4" cy="4" r="2"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </main>
     </div>
   )
 }

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Software Composer LP - Cursor Template",
-  description: "Create stunning landing pages in minutes with just 3 prompts. Save thousands on design and development with our Cursor-powered template.",
+  title: "Sprezzatura Travel - Luxury Hotels & Exclusive Benefits",
+  description: "Experience the world's finest hotels with exclusive rates and unparalleled benefits through Sprezzatura Travel.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>{children}</body>
+      <body className="min-h-screen bg-black antialiased">
+        {children}
+      </body>
     </html>
   );
 }
